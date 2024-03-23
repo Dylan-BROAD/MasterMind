@@ -1,3 +1,30 @@
+
+
+
+- [x] Your choice of game.
+- [x] A wireframe of your "main" game screen.
+- [ ] Pseudocode for the overall game play.
+- [x] User story
+
+Necessary Deliverables
+
+- [ ] Your game's Title: Description of the game. Background info of the game.
+- [ ] Screenshots of the actual game.
+- [ ] Technologies Used: List of technologies, JS, HTML, CSS
+- [ ] Getting Started: Include link to your deployed game and instructions deemed important.
+ - [ ] Next Steps: Planned future enhancements (icebox items)
+
+Game choice:
+I have chosen to make a childhood favourite game, MasterMind.
+
+
+Description:
+The codemaker chooses the colours and pattern at the start of the game, only the codemaker knows the answer. The codebreaker tries to guess the pattern, in both order and color, within 10 turns. Each guess is made by placing a row of code pegs on the decoding board.
+
+Rules:
+User gets 10 guesses.
+User receives information regarding guesses to act as "hints"
+
 User story:
 - I should be able to render new game.
 - I should be able to change colour selections.
@@ -9,7 +36,6 @@ User story:
 - I want to be told I did not win.
 - The option to play again should be available.
 - A scoreboard should also be displayed showing “player vs computer” displaying relevant scoring. 
-
 
 
 Pseudocode:
