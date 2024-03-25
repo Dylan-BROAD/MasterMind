@@ -1,12 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="script.js"></script> 
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mastermind</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="content">
+        <div class="gameBoard">
+          <div class="board"></div>
+          <div class="tiles"></div>
+        </div>
+        <div class="other"></div>
+        <div class="code">
+          <div class="computerColour" id="computerColour1"></div>
+          <div class="computerColour" id="computerColour2"></div>
+          <div class="computerColour" id="computerColour3"></div>
+          <div class="computerColour" id="computerColour4"></div>
+        </div>
+
+        <div class="playerChoices">
+          <div class="computerGuess"></div>
+          <div class="colourTable">
+            <div class="colour" id="red"></div>
+            <div class="colour" id="orange"></div>
+            <div class="colour" id="yellow"></div>
+            <div class="colour" id="green"></div>
+            <div class="colour" id="blue"></div>
+            <div class="colour" id="purple"></div>
+          </div>
+          <div class="colourChoice"></div>
+          <div class="submit">SUBMIT</div>
+          <div class="reset">RESET</div>
+          <div class="clear">CLEAR</div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
