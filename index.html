@@ -12,7 +12,20 @@
     <div class="container">
       <div class="content">
         <div class="gameBoard">
-          <div class="board"></div>
+          <div class="board">
+            <div class="guessRow">
+              <div class="row">=</div>
+              <div class="row">=</div>
+              <div class="row">=</div>
+              <div class="row">=</div>
+              <div class="row">=</div>
+              <div class="row">=</div>
+              <div class="row">=</div>
+              <div class="row">=</div>
+              <div class="row">=</div>
+              <div class="row">=</div>
+            </div>
+          </div>
           <div class="tiles"></div>
         </div>
         <div class="other"></div>
@@ -26,17 +39,19 @@
         <div class="playerChoices">
           <div class="computerGuess"></div>
           <div class="colourTable">
-            <div class="colour" id="red"></div>
-            <div class="colour" id="orange"></div>
-            <div class="colour" id="yellow"></div>
-            <div class="colour" id="green"></div>
-            <div class="colour" id="blue"></div>
-            <div class="colour" id="purple"></div>
+            <div class="buttons">
+              <button class="button green">Green</button>
+              <button class="button blue">Blue</button>
+              <button class="button red">Red</button>
+              <button class="button purple">Purple</button>
+              <button class="button yellow">Yellow</button>
+              <button class="button orange">Orange</button>
+            </div>
           </div>
           <div class="colourChoice"></div>
-          <div class="submit">SUBMIT</div>
-          <div class="reset">RESET</div>
-          <div class="clear">CLEAR</div>
+          <button class="button submit">SUBMIT</button>
+          <button class="button reset">RESET</button>
+          <button class="button clear">CLEAR</button>
         </div>
       </div>
     </div>
