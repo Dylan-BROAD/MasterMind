@@ -4,30 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mastermind</title>
-    <script src="script.js"></script>
+    
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
+    <header>MASTERMIND</header>
     <div class="container">
+      <main>
       <div class="content">
-        <div class="gameBoard">
-          <div class="board">
-            <div class="guessRow">
-              <div class="row">=</div>
-              <div class="row">=</div>
-              <div class="row">=</div>
-              <div class="row">=</div>
-              <div class="row">=</div>
-              <div class="row">=</div>
-              <div class="row">=</div>
-              <div class="row">=</div>
-              <div class="row">=</div>
-              <div class="row">=</div>
+        <!-- <div id='hint-1' class="attempt">
+          <div class="tileColumn">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
             </div>
+              <div id='attempt-1' class="guessColumn">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
           </div>
-          <div class="tiles"></div>
-        </div>
+        </div> -->
+        </main>
         <div class="other"></div>
         <div class="code">
           <div class="computerColour" id="computerColour1"></div>
@@ -35,10 +36,10 @@
           <div class="computerColour" id="computerColour3"></div>
           <div class="computerColour" id="computerColour4"></div>
         </div>
-
+        <aside>
         <div class="playerChoices">
-          <div class="computerGuess"></div>
-          <div class="colourTable">
+          <div class="computerGuess">Comp code to guess</div>
+          <div class="colorTable">
             <div class="buttons">
               <button class="button green">Green</button>
               <button class="button blue">Blue</button>
@@ -48,12 +49,14 @@
               <button class="button orange">Orange</button>
             </div>
           </div>
-          <div class="colourChoice"></div>
-          <button class="button submit">SUBMIT</button>
-          <button class="button reset">RESET</button>
-          <button class="button clear">CLEAR</button>
+          <div class="colorChoice">CHOICE</div>
+          <input id="submit" type="button" value="SUBMIT">
+          <input id="reset" type="button" value="RESET">
+          <input id="clear" type="button" value="CLEAR">
         </div>
       </div>
     </div>
+  </aside>
+    <script src="script.js"></script>
   </body>
 </html>
