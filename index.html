@@ -1,62 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mastermind</title>
-    
-    <link rel="stylesheet" href="style.css" />
-  </head>
-
-  <body>
-    <header>MASTERMIND</header>
-    <div class="container">
-      <main>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mastermind</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>MASTERMIND</header>
+  <div class="container">
+    <main>
       <div class="content">
-        <!-- <div id='hint-1' class="attempt">
-          <div class="tileColumn">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-              <div id='attempt-1' class="guessColumn">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-          </div>
-        </div> -->
-        </main>
-        <div class="other"></div>
-        <div class="code">
+        <!-- New HTML structure for displaying attempts -->
+        <!-- Each attempt div contains two child divs: one for the hint column and one for the guess column -->
+        <!-- The hint column will dynamically display the hint circles -->
+        <!-- The guess column will display the user's color guesses -->
+        <!-- Repeat this structure for each attempt -->
+        <div class="attempt">
+          <div class="hintColumn"></div>
+          <div class="guessColumn"></div>
+        </div>
+        <!-- Repeat this structure for each attempt -->
+      </div>
+    </main>
+    <aside>
+      <div class="playerChoices">
+        <div class="computerGuess">Comp code to guess
           <div class="computerColour" id="computerColour1"></div>
           <div class="computerColour" id="computerColour2"></div>
           <div class="computerColour" id="computerColour3"></div>
           <div class="computerColour" id="computerColour4"></div>
         </div>
-        <aside>
-        <div class="playerChoices">
-          <div class="computerGuess">Comp code to guess</div>
-          <div class="colorTable">
-            <div class="buttons">
-              <button class="button green">Green</button>
-              <button class="button blue">Blue</button>
-              <button class="button red">Red</button>
-              <button class="button purple">Purple</button>
-              <button class="button yellow">Yellow</button>
-              <button class="button orange">Orange</button>
-            </div>
+        <div class="colorTable">
+          <div class="buttons">
+            <input id="green" type="button" value="Green" onclick="playersColorChoice('green')">
+            <input id="blue" type="button" value="Blue" onclick="playersColorChoice('blue')">
+            <input id="red" type="button" value="Red" onclick="playersColorChoice('red')">
+            <input id="purple" type="button" value="Purple" onclick="playersColorChoice('purple')">
+            <input id="yellow" type="button" value="Yellow" onclick="playersColorChoice('yellow')">
+            <input id="orange" type="button" value="Orange" onclick="playersColorChoice('orange')">
           </div>
-          <div class="colorChoice">CHOICE</div>
-          <input id="submit" type="button" value="SUBMIT">
-          <input id="reset" type="button" value="RESET">
-          <input id="clear" type="button" value="CLEAR">
         </div>
+        <div id="colorChoice">CHOICE</div>
+        <input id="submit" type="button" value="SUBMIT">
+        <input id="reset" type="button" value="RESET">
+        <input id="clear" type="button" value="CLEAR">
       </div>
-    </div>
-  </aside>
-    <script src="script.js"></script>
-  </body>
+    </aside>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
 </html>
