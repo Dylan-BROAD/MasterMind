@@ -11,26 +11,15 @@
   <div class="container">
     <main>
       <div class="content">
-        <!-- New HTML structure for displaying attempts -->
-        <!-- Each attempt div contains two child divs: one for the hint column and one for the guess column -->
-        <!-- The hint column will dynamically display the hint circles -->
-        <!-- The guess column will display the user's color guesses -->
-        <!-- Repeat this structure for each attempt -->
         <div class="attempt">
           <div class="hintColumn"></div>
           <div class="guessColumn"></div>
         </div>
-        <!-- Repeat this structure for each attempt -->
       </div>
     </main>
     <aside>
       <div class="playerChoices">
-        <div class="computerGuess">Comp code to guess
-          <div class="computerColour" id="computerColour1"></div>
-          <div class="computerColour" id="computerColour2"></div>
-          <div class="computerColour" id="computerColour3"></div>
-          <div class="computerColour" id="computerColour4"></div>
-        </div>
+        <div class="computerGuess">Comp code to guess</div>
         <div class="colorTable">
           <div class="buttons">
             <input id="green" type="button" value="Green" onclick="playersColorChoice('green')">
@@ -45,6 +34,7 @@
         <input id="submit" type="button" value="SUBMIT">
         <input id="reset" type="button" value="RESET">
         <input id="clear" type="button" value="CLEAR">
+        <div id="message"></div>
       </div>
     </aside>
   </div>

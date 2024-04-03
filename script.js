@@ -12,7 +12,7 @@ const yellow_button = document.getElementById("yellow");
 const orange_button = document.getElementById("orange");
 
 let codeLength = 4;
-let trys = 10;
+let tries = 10;
 let colors = ["green", "blue", "red", "purple", "yellow", "orange"];
 
 let random_code = [];
@@ -35,8 +35,19 @@ function init() {
     random_code.push(colors[Math.floor(Math.random() * colors.length)]);
     console.log(random_code);
   }
+
+  // Display the random code in the computer guess section
+  let computerGuessDiv = document.querySelector(".computerGuess");
+  computerGuessDiv.innerHTML = "";
+  for (let i = 0; i < codeLength; i++) {
+    let codeCircle = document.createElement("div");
+    codeCircle.classList.add("colorCircle");
+    codeCircle.style.backgroundColor = random_code[i];
+    computerGuessDiv.appendChild(codeCircle);
+  }
+
   // Display board
-  for (let i = 1; i <= trys; i++) {
+  for (let i = 1; i <= tries; i++) {
     let div_attempt = document.createElement("div");
     div_attempt.setAttribute("id", "attempt-" + i);
     div_attempt.setAttribute("class", "attempt");
@@ -107,9 +118,9 @@ function clearChoices() {
   });
 }
 
-// Function to handle click on the Reset button
 function resetGame() {
-  init(); // Reinitialize the game board
+  // Reload the page to fully restart the game
+  location.reload();
 }
 
 // Event listener for the Reset button
@@ -139,9 +150,13 @@ function submitGuess() {
     console.log("Congratulations! You've won the game!");
     displayComputerGuess();
     // Additional logic for what happens when the player wins
+    // Show the message on the webpage
+    let messageElement = document.getElementById("message");
+    messageElement.textContent = "Congratulations! You've won the game!";
+    messageElement.style.display = "block";
   } else {
     console.log("Incorrect guess. Keep trying!");
-    if (attempt === trys) {
+    if (attempt === tries) {
       console.log("Sorry, you've run out of attempts. You lose!");
       let restart = confirm("Would you like to restart the game?");
       if (restart) {
@@ -151,6 +166,10 @@ function submitGuess() {
       }
     }
     // Additional logic for what happens when the player loses
+    // Show the message on the webpage
+    let messageElement = document.getElementById("message");
+    messageElement.textContent = "Sorry, that was an incorrect guess.";
+    messageElement.style.display = "block";
   }
 
   attempt++;
