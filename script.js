@@ -37,14 +37,6 @@ function init() {
   }
 
   // Display the random code in the computer guess section
-  let computerGuessDiv = document.querySelector(".computerGuess");
-  computerGuessDiv.innerHTML = "";
-  for (let i = 0; i < codeLength; i++) {
-    let codeCircle = document.createElement("div");
-    codeCircle.classList.add("colorCircle");
-    codeCircle.style.backgroundColor = random_code[i];
-    computerGuessDiv.appendChild(codeCircle);
-  }
 
   // Display board
   for (let i = 1; i <= tries; i++) {
@@ -77,6 +69,17 @@ function init() {
 
     // Prepend the attempt div to content_display
     main_display.append(div_attempt);
+  }
+}
+
+function renderSecretCode() {
+  let computerGuessDiv = document.querySelector(".computerGuess");
+  computerGuessDiv.innerHTML = "";
+  for (let i = 0; i < codeLength; i++) {
+    let codeCircle = document.createElement("div");
+    codeCircle.classList.add("colorCircle");
+    codeCircle.style.backgroundColor = random_code[i];
+    computerGuessDiv.appendChild(codeCircle);
   }
 }
 
@@ -146,6 +149,30 @@ function submitGuess() {
     guess.push(color || "");
   });
 
+  let hints = generateHints(guess); // Generate hints based on the guess
+
+  function generateHints(guess) {
+    let hints = [];
+    for (let i = 0; i < guess.length; i++) {
+      if (guess[i] === random_code[i]) {
+        hints.push("black"); // Correct color and position
+      } else if (random_code.includes(guess[i])) {
+        hints.push("white"); // Correct color but wrong position
+      } else {
+        hints.push(""); // Incorrect color
+      }
+    }
+    return hints;
+  }
+
+  // Display hints
+  let hintDivs = document.querySelectorAll(
+    ".attempt:nth-child(" + attempt + ") .hint"
+  );
+  hints.forEach((hint, index) => {
+    hintDivs[index].style.backgroundColor = hint;
+  });
+
   if (checkWin(guess)) {
     console.log("Congratulations! You've won the game!");
     displayComputerGuess();
@@ -154,10 +181,12 @@ function submitGuess() {
     let messageElement = document.getElementById("message");
     messageElement.textContent = "Congratulations! You've won the game!";
     messageElement.style.display = "block";
+    renderSecretCode();
   } else {
     console.log("Incorrect guess. Keep trying!");
     if (attempt === tries) {
       console.log("Sorry, you've run out of attempts. You lose!");
+      renderSecretCode();
       let restart = confirm("Would you like to restart the game?");
       if (restart) {
         attempt = 1;

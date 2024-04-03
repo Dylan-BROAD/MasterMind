@@ -15,7 +15,15 @@ header {
   border: 1px solid rgb(0, 0, 0);
 }
 
-.hintColumn,
+.hintColumn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgb(150, 150, 150);
+  border: 1px solid white;
+}
+
 .guessColumn {
   display: flex;
   flex-direction: row;
@@ -151,7 +159,6 @@ header {
 }
 
 #message {
-  text-align: center;
   display: none;
   margin-top: 20px;
   text-align: center;
