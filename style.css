@@ -7,6 +7,7 @@ header {
   justify-content: center;
   width: 100vw;
   height: 100vh;
+  background-color: black;
 }
 
 .attempt {
@@ -20,7 +21,7 @@ header {
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
-  background-color: rgb(150, 150, 150);
+  background-color: rgb(150, 83, 83);
   border: 1px solid white;
 }
 
@@ -37,7 +38,7 @@ header {
   width: 69px;
   height: 69px;
   border-radius: 50%;
-  background-color: lightgrey;
+  background-color: gray;
   margin: 5px;
 }
 
@@ -54,16 +55,15 @@ header {
   height: 20px;
   border-radius: 50%;
   margin: 5px;
-  background-color: lightgray; /* Set the background color for hint circles */
 }
 
 .computerGuess {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 200px;
+  width: 207px;
   height: 50px;
-  border: 5px solid black;
+  border: 1px solid rgb(255, 255, 255);
   background-color: black;
 }
 
@@ -77,7 +77,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 210px;
+  width: 207px;
   height: 50px;
   border: 1px solid black;
 }

@@ -96,6 +96,9 @@ function playersColorChoice(color) {
       break; // Exit the loop after setting the color
     }
   }
+  // Update the background color of the colorChoice div
+  let colorChoiceDiv = document.getElementById("colorChoice");
+  colorChoiceDiv.style.backgroundColor = color;
 }
 
 // Function to check if the current guess is correct
@@ -125,12 +128,6 @@ function resetGame() {
   // Reload the page to fully restart the game
   location.reload();
 }
-
-// Event listener for the Reset button
-reset_button.addEventListener("click", resetGame);
-
-// Event listener for the Clear button
-clear_button.addEventListener("click", clearChoices);
 
 // Function to display the computer guess
 function displayComputerGuess() {
@@ -187,12 +184,6 @@ function submitGuess() {
     if (attempt === tries) {
       console.log("Sorry, you've run out of attempts. You lose!");
       renderSecretCode();
-      let restart = confirm("Would you like to restart the game?");
-      if (restart) {
-        attempt = 1;
-        init(); // Restart the game
-        return;
-      }
     }
     // Additional logic for what happens when the player loses
     // Show the message on the webpage
@@ -204,4 +195,9 @@ function submitGuess() {
   attempt++;
 }
 
+// Event listener for the submit button
 submit_button.addEventListener("click", submitGuess);
+// Event listener for the Reset button
+reset_button.addEventListener("click", resetGame);
+// Event listener for the Clear button
+clear_button.addEventListener("click", clearChoices);
