@@ -1,45 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mastermind</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>MASTERMIND</header>
-  <div class="container">
-    <main>
-      <div class="content">
-        <div class="attempt">
-          <div class="hintColumn"></div>
-          <div class="guessColumn"></div>
-        </div>
-      </div>
-    </main>
-    <aside>
-      <div class="playerChoices">
-        <div class="computerGuess"></div>
-        <div class="colorTable">
-          <div class="buttons">
-            <input id="green" type="button" value="Green" onclick="playersColorChoice('green')">
-            <input id="blue" type="button" value="Blue" onclick="playersColorChoice('blue')">
-            <input id="red" type="button" value="Red" onclick="playersColorChoice('red')">
-            <input id="purple" type="button" value="Purple" onclick="playersColorChoice('purple')">
-            <input id="yellow" type="button" value="Yellow" onclick="playersColorChoice('yellow')">
-            <input id="orange" type="button" value="Orange" onclick="playersColorChoice('orange')">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mastermind</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>MASTERMIND</header>
+    <div class="container">
+      <main>
+        <div class="content">
+          <div class="attempt">
+            <div class="hintColumn"></div>
+            <div class="guessColumn"></div>
           </div>
         </div>
-        <div id="colorChoice">CHOICE</div>
-        <input id="submit" type="button" value="SUBMIT">
-        <input id="reset" type="button" value="RESET">
-        <input id="clear" type="button" value="CLEAR">
-        <div id="message"></div>
-      </div>
-    </aside>
-  </div>
-  <script src="script.js"></script>
-</body>
-</html>
-
+      </main>
+      <aside>
+        <div class="playerChoices">
+          <div class="computerGuess"></div>
+          <div class="colorTable">
+            <div class="buttons">
+              <input
+                id="green"
+                type="button"
+                value="Green"
+                onclick="playersColorChoice('green')"
+              />
+              <input
+                id="blue"
+                type="button"
+                value="Blue"
+                onclick="playersColorChoice('blue')"
+              />
+              <input
+                id="red"
+                type="button"
+                value="Red"
+                onclick="playersColorChoice('red')"
+              />
+              <input
+                id="purple"
+                type="button"
+                value="Purple"
+                onclick="playersColorChoice('purple')"
+              />
+              <input
+                id="yellow"
+                type="button"
+                value="Yellow"
+                onclick="playersColorChoice('yellow')"
+              />
+              <input
+                id="orange"
+                type="button"
+                value="Orange"
+                onclick="playersColorChoice('orange')"
+              />
+            </div>
+          </div>
+          <div id="colorChoice">CHOICE</div>
+          <input id="submit" type="button" value="SUBMIT" />
+          <input id="reset" type="button" value="RESET" />
+          <input id="clear" type="button" value="CLEAR" />
+          <div id="message"></div>
+        </div>
+      </aside>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>

@@ -1,5 +1,10 @@
 header {
   text-align: center;
+  background-color: yellow;
+}
+
+body {
+  margin: 0px;
 }
 
 .container {
@@ -35,16 +40,16 @@ header {
 }
 
 .hintColumn > div {
-  width: 69px;
-  height: 69px;
+  width: 65.9px;
+  height: 65.9px;
   border-radius: 50%;
   background-color: gray;
   margin: 5px;
 }
 
 .guessColumn > div {
-  width: 69px;
-  height: 69px;
+  width: 65.9px;
+  height: 65.9px;
   border-radius: 50%;
   background-color: gray;
   margin: 5px;
@@ -153,7 +158,7 @@ header {
   justify-content: center;
   align-items: center;
   width: 210px;
-  height: 98px;
+  height: 75px;
   background-color: rgb(86, 86, 86);
   cursor: pointer;
 }
