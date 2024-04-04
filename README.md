@@ -1,15 +1,36 @@
 - [x] Your choice of game.
 - [x] A wireframe of your "main" game screen.
-- [ ] Pseudocode for the overall game play.
+- [x] Pseudocode for the overall game play.
 - [x] User story
 
-Necessary Deliverables
+Necessary Deliverables:
 
-- [ ] Your game's Title: Description of the game. Background info of the game.
+- [x] Your game's Title: Description of the game. Background info of the game.
+
+  Description:
+  The codemaker chooses the colours and pattern at the start of the game, only the codemaker knows the answer. The codebreaker tries to guess the pattern, in both order and color, within 10 turns. Each guess is made by placing a row of code pegs on the decoding board.
+
+  Backgroud Info:
+  This game was first created as a board game by the inventor Mordecai Meirowitz. In the early 1970's Mordecai searched for a company to help bring this game to life, which he did. That company being Invicta Plastics.
+
 - [ ] Screenshots of the actual game.
-- [ ] Technologies Used: List of technologies, JS, HTML, CSS
+      (Take screenshots of game and upload to imgur)
+
+- [x] Technologies Used: List of technologies, JS, HTML, CSS
+
+  This game is created by using a mix of vanilla JS with the addition of HTML and CSS elements
+
 - [ ] Getting Started: Include link to your deployed game and instructions deemed important.
-- [ ] Next Steps: Planned future enhancements (icebox items)
+
+  https://dylan-broad.github.io/MasterMind/
+
+- [x] Next Steps: Planned future enhancements (icebox items)
+
+Future additions:
+
+- Multiplayer
+- Refined design
+- Add scoring system
 
 Game choice:
 I have chosen to make a childhood favourite game, MasterMind.
@@ -34,8 +55,6 @@ User story:
 - I want to be congratulated for winning the game.
 - If I am unable to guess correctly in the allocated amount of guesses, the computer code should be shown to me.
 - I want to be told I did not win.
-- The option to play again should be available.
-- A scoreboard should also be displayed showing “player vs computer” displaying relevant scoring.
 
 Pseudocode:
 
@@ -51,11 +70,3 @@ Pseudocode:
 - If user is unable to guess correctly, user loses. Webpage will prompt user loss.
 - Users correct winning guess displays computers initiated code.
 - If user is unsuccessful in guessing correctly, game shows computers code.
-- When end game is reached, prompt user to replay and loop to start.
-- If user win add point to user, if user loses add point to computer.
-
-Future additions:
-
-- Multiplayer
-- Refined design
-- Better scoring system # MasterMindAssignment-
