@@ -33,26 +33,12 @@ body {
   border: 1px solid white;
 }
 
-.hintColumn > div {
-  width: 61.5px;
-  height: 61.5px;
-  border-radius: 50%;
-  background-color: gray;
-  margin: 5px;
-}
-
+.hintColumn > div,
 .guessColumn > div {
   width: 61.5px;
   height: 61.5px;
   border-radius: 50%;
   background-color: gray;
-  margin: 5px;
-}
-
-.hint {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
   margin: 5px;
 }
 

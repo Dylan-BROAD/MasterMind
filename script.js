@@ -1,7 +1,7 @@
 // Board / Display
 const main_display = document.querySelector(".content");
-var modal = document.getElementById("myModal");
-var span = document.getElementsByClassName("close")[0];
+const modal = document.getElementById("myModal");
+const span = document.getElementsByClassName("close")[0];
 
 let codeLength = 4;
 let tries = 10;
@@ -20,7 +20,7 @@ const red_button = document.getElementById("red");
 const purple_button = document.getElementById("purple");
 const yellow_button = document.getElementById("yellow");
 const orange_button = document.getElementById("orange");
-var btn = document.getElementById("info");
+const btn = document.getElementById("info");
 
 // Initialize board
 init();
