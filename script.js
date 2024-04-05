@@ -1,15 +1,7 @@
+// Board / Display
 const main_display = document.querySelector(".content");
-
-const submit_button = document.getElementById("submit");
-const reset_button = document.getElementById("reset");
-const clear_button = document.getElementById("clear");
-
-const green_button = document.getElementById("green");
-const blue_button = document.getElementById("blue");
-const red_button = document.getElementById("red");
-const purple_button = document.getElementById("purple");
-const yellow_button = document.getElementById("yellow");
-const orange_button = document.getElementById("orange");
+var modal = document.getElementById("myModal");
+var span = document.getElementsByClassName("close")[0];
 
 let codeLength = 4;
 let tries = 10;
@@ -17,6 +9,18 @@ let colors = ["green", "blue", "red", "purple", "yellow", "orange"];
 
 let random_code = [];
 let attempt = 1;
+
+// Buttons
+const submit_button = document.getElementById("submit");
+const reset_button = document.getElementById("reset");
+const clear_button = document.getElementById("clear");
+const green_button = document.getElementById("green");
+const blue_button = document.getElementById("blue");
+const red_button = document.getElementById("red");
+const purple_button = document.getElementById("purple");
+const yellow_button = document.getElementById("yellow");
+const orange_button = document.getElementById("orange");
+var btn = document.getElementById("info");
 
 // Initialize board
 init();
@@ -67,18 +71,19 @@ function init() {
     div_attempt.append(div_hintColumn);
     div_attempt.append(div_guessColumn);
 
-    // Prepend the attempt div to content_display
+    // Append the attempt div to content_display
     main_display.append(div_attempt);
   }
 }
 
+// Show secret code
 function renderSecretCode() {
   let computerGuessDiv = document.querySelector(".computerGuess");
   computerGuessDiv.innerHTML = "";
   for (let i = 0; i < codeLength; i++) {
     let codeCircle = document.createElement("div");
     codeCircle.classList.add("colorCircle");
-    codeCircle.style.backgroundColor = random_code[i];
+    codeCircle.style.backgroundColor = random_code[i]; // Changing DIV to corresponding color
     computerGuessDiv.appendChild(codeCircle);
   }
 }
@@ -173,23 +178,30 @@ function submitGuess() {
   if (checkWin(guess)) {
     console.log("Congratulations! You've won the game!");
     displayComputerGuess();
-    // Additional logic for what happens when the player wins
     // Show the message on the webpage
     let messageElement = document.getElementById("message");
-    messageElement.textContent = "Congratulations! You've won the game!";
+    messageElement.innerHTML =
+      "Congratulations! You've won the game!<br>Press RESET to play again.";
     messageElement.style.display = "block";
+    submit_button.disabled = true;
     renderSecretCode();
   } else {
     console.log("Incorrect guess. Keep trying!");
-    if (attempt === tries) {
-      console.log("Sorry, you've run out of attempts. You lose!");
-      renderSecretCode();
-    }
-    // Additional logic for what happens when the player loses
     // Show the message on the webpage
     let messageElement = document.getElementById("message");
     messageElement.textContent = "Sorry, that was an incorrect guess.";
     messageElement.style.display = "block";
+
+    if (attempt === tries) {
+      console.log("Sorry, you've run out of attempts. You lose!");
+      submit_button.disabled = true;
+      renderSecretCode();
+      // Display lose message
+      let messageElement = document.getElementById("message");
+      messageElement.innerHTML =
+        "Sorry, you've run out of attempts. You lose!<br>Press RESET to play again.";
+      messageElement.style.display = "block";
+    }
   }
 
   attempt++;
@@ -202,22 +214,12 @@ reset_button.addEventListener("click", resetGame);
 // Event listener for the Clear button
 clear_button.addEventListener("click", clearChoices);
 
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("info");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-
+// Open the modal
 btn.onclick = function () {
   modal.style.display = "block";
 };
 
-// When the user clicks on <span> (x), close the modal
+// Close the modal
 span.onclick = function () {
   modal.style.display = "none";
 };
