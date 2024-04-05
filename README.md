@@ -13,18 +13,20 @@ Necessary Deliverables:
   Backgroud Info:
   This game was first created as a board game by the inventor Mordecai Meirowitz. In the early 1970's Mordecai searched for a company to help bring this game to life, which he did. That company being Invicta Plastics.
 
-- [ ] Screenshots of the actual game.
-      (Take screenshots of game and upload to imgur)
+- [x] Screenshots of the actual game.
+      https://imgur.com/a/W0S3q3f
 
-- [x] Technologies Used: List of technologies, JS, HTML, CSS
+- [x] Technologies Used: List of technologies, JS, HTML, CSS.
 
-  This game is created by using a mix of vanilla JS with the addition of HTML and CSS elements
+  This game is created by using a mix of vanilla JS with the addition of HTML and CSS elements.
 
-- [ ] Getting Started: Include link to your deployed game and instructions deemed important.
+- [x] Getting Started: Include link to your deployed game and instructions deemed important.
 
   https://dylan-broad.github.io/MasterMind/
 
-- [x] Next Steps: Planned future enhancements (icebox items)
+  Instructions can be found in-game.
+
+- [x] Next Steps: Planned future enhancements
 
 Future additions:
 
@@ -43,7 +45,7 @@ The codemaker chooses the colours and pattern at the start of the game, only the
 
 Rules:
 User gets 10 guesses.
-User receives information regarding guesses to act as "hints"
+User receives information regarding guesses to act as "hints".
 
 User story:
 
