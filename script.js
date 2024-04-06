@@ -37,7 +37,6 @@ function init() {
   // Random code generator
   for (let i = 0; i < codeLength; i++) {
     random_code.push(colors[Math.floor(Math.random() * colors.length)]);
-    console.log(random_code);
   }
 
   // Display the random code in the computer guess section
@@ -54,7 +53,6 @@ function init() {
 
     // Create guess circles
     for (let j = 1; j <= codeLength; j++) {
-      let div_tr = document.createElement("div");
       let div_gr = document.createElement("div");
       div_gr.classList.add("guess");
       div_guessColumn.append(div_gr);
@@ -81,9 +79,11 @@ function renderSecretCode() {
   let computerGuessDiv = document.querySelector(".computerGuess");
   computerGuessDiv.innerHTML = "";
   for (let i = 0; i < codeLength; i++) {
+    // Creating div for secret code colors
     let codeCircle = document.createElement("div");
     codeCircle.classList.add("colorCircle");
-    codeCircle.style.backgroundColor = random_code[i]; // Changing DIV to corresponding color
+    // Changing div to corresponding color
+    codeCircle.style.backgroundColor = random_code[i];
     computerGuessDiv.appendChild(codeCircle);
   }
 }
@@ -176,7 +176,6 @@ function submitGuess() {
   });
 
   if (checkWin(guess)) {
-    console.log("Congratulations! You've won the game!");
     displayComputerGuess();
     // Show the message on the webpage
     let messageElement = document.getElementById("message");
@@ -186,14 +185,12 @@ function submitGuess() {
     submit_button.disabled = true;
     renderSecretCode();
   } else {
-    console.log("Incorrect guess. Keep trying!");
     // Show the message on the webpage
     let messageElement = document.getElementById("message");
     messageElement.textContent = "Sorry, that was an incorrect guess.";
     messageElement.style.display = "block";
 
     if (attempt === tries) {
-      console.log("Sorry, you've run out of attempts. You lose!");
       submit_button.disabled = true;
       renderSecretCode();
       // Display lose message
