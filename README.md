@@ -40,9 +40,6 @@ I have chosen to make a childhood favourite game, MasterMind.
 WIREFRAME DESIGN:
 https://www.figma.com/file/EM5Q6nCUC1bnLBbMAEGeo3/Welcome-to-FigJam?type=whiteboard&node-id=0%3A1&t=vr8kFh3eSETfHYtb-1
 
-Description:
-The codemaker chooses the colours and pattern at the start of the game, only the codemaker knows the answer. The codebreaker tries to guess the pattern, in both order and color, within 10 turns. Each guess is made by placing a row of code pegs on the decoding board.
-
 Rules:
 User gets 10 guesses.
 User receives information regarding guesses to act as "hints".
